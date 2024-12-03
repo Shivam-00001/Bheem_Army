@@ -1,0 +1,248 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Tahoma, Verdana, sans-serif;
+        }
+/* Make the navbar fixed at the top */
+.navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar stays above other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
+}
+
+/* Add padding to the body or the content below the navbar to prevent it from being hidden under the fixed navbar */
+body {
+    background-image: url('/images/background_img.png');
+    padding-top: 80px; /* Adjust this value based on the navbar height */
+}
+        .bg-custom {
+            background-color: #5a088a !important;
+        }
+  
+        .navbar-logo img {
+            width: 120px;
+            height: 60px;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.829) !important;  
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:active {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .navbar-brand {
+            color: rgba(255, 255, 255, 0.829) !important;  
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            margin-left: 85px;
+            font-size: 30px !important;
+        }
+
+        .navbar-brand:hover {
+            color: white !important;
+            transition: color 0.3s ease;
+        }
+
+
+/* Ensure the dropdown menu appears below the toggle button */
+ /* Custom styles for dropdown alignment */
+ .navbar-collapse {
+    position: absolute;
+    right: 0;
+    top: 100%; /* Position the dropdown just below the toggle button */
+    background-color: rgba(90, 8, 138, 0.301); /* Semi-transparent purple */
+    width: auto; /* Adjust width based on content */
+    border-radius: 5px; /* Optional: Add some border-radius for aesthetics */
+    backdrop-filter: blur(10px); /* Optional: Adds a blur effect for a frosted glass look */
+}
+
+.navbar-collapse ul {
+    margin: 0;
+    padding: 0.5rem 1rem; /* Add some padding for spacing */
+}
+
+.navbar-nav .nav-link {
+    color: white;
+}
+
+
+
+@media (min-width: 768px) {
+    .navbar-collapse {
+        position: static;
+        background-color: transparent; /* Reset background for larger screens */
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .navbar-collapse ul {
+        display: flex;
+        justify-content: flex-end; /* Align to the right */
+        padding: 0;
+    }
+}
+
+
+        
+
+        @media (max-width: 1100px) {
+            .navbar-brand {
+                font-size: 21px;
+                margin-left: 0;
+            }
+            .navbar-logo img {
+                width: 80px;
+                height: 50px;
+            }
+            
+        }
+
+        /* Add margin to the right side of the navbar-collapse */
+        #navbarContent {
+            margin-right: 20px; /* Adjust the value as needed */
+        }
+
+        /* Additional Styles for Smaller Screens */
+        @media (max-width: 767px) {
+            .navbar {
+                position: sticky;
+                top: 0;
+            }
+            .navbar-nav {
+                text-align: center; /* Center nav links for small screens */
+            }
+            .navbar-nav .nav-item {
+                margin-bottom: 10px; /* Add space between nav items */
+            }
+            .navbar-toggler {
+                border: none; /* Remove border on toggle button */
+            }
+            .navbar-nav .nav-link:hover {
+                background-color: #5a088a !important;
+                border-radius: 20%;
+                color: #ffd700 !important; /* Change color on hover */
+            }
+        }
+ /* Additional styling for Hero Images */
+        .hero-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 500px; /* Adjust the height as per your requirement */
+        }
+
+        .hero-container img {
+            object-fit: cover;
+            height: 100%;
+        }
+
+        .hero-container .image-1 {
+            width: 15%;
+        }
+
+        .hero-container .image-2 {
+            width: 68%;
+            background-image: url('/images/poster1.png');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            border-radius: 8px; /* Optional: To add rounded corners */
+         
+        }
+
+        .hero-container .image-2:hover {
+            background-image: url('/images/poster2.png'); /* Change the image on hover */
+            transition: background-image 1.5s ease; 
+        }
+
+        .hero-container .image-3 {
+            width: 17%;
+        }
+
+        /* Media Query for Tablets */
+        @media (max-width: 768px) {
+            .hero-container {
+                display: block;
+            }
+
+            .hero-container .image-1,
+            .hero-container .image-3 {
+                display: none; /* Hide the first and third images on tablets */
+            }
+
+            .hero-container .image-2 {
+                height: 90%;
+                width: 100%; /* Make the second image take up the full width */
+                object-fit: contain; /* Ensure the entire image is visible without cutting */
+                object-position: center; /* Center the image */
+            }
+            .Disclaimer {
+                max-width: 95%; 
+                margin-top: -31px !important;/* On smaller screens, allow the disclaimer to take more width */
+            }
+        }
+        @media (max-width: 557px){
+            .hero-container .image-2 {
+                height: 49% !important;
+              
+            }
+            .Disclaimer {
+                max-width: 95%; 
+                margin-top: -242px !important;/* On smaller screens, allow the disclaimer to take more width */
+            }
+        }
+
+        .Disclaimer {
+            color: #fff !important;
+            background-color: #52525263 !important; /* Light gray background for the disclaimer */
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px; /* Slightly rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.74); /* Subtle shadow for a soft elevation effect */
+            font-family: Arial, sans-serif; /* Use a clean, readable font */
+            font-size: 14px; /* Readable font size */
+           /* Dark text color for better readability */
+            line-height: 1.6; /* Spacing between lines to improve readability */
+            text-align: justify; /* Justify the text for a neat alignment */
+            max-width:96%; /* Limiting width to ensure it's not too wide */
+            margin-left: auto; /* Center-align horizontally */
+            margin-right: auto; /* Center-align horizontally */
+            margin-bottom: 40px; /* Extra space below the disclaimer */
+        }
+        .Disclaimer h4{
+            color: lightslategray;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+   
+        .Disclaimer p {
+            font-size: 15px;
+            margin-bottom: 15px; /* Add some space between paragraphs */
+            font-weight:bold;
+            color: lightslategray;
+        }
+ 
+        .Disclaimer h4:hover, .Disclaimer p:hover {
+            color: white !important;
+            transition: color 0.3s ease;
+        }        
+        
+        @media (max-width: 768px) {
+
+        }
+        
